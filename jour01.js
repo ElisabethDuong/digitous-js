@@ -34,9 +34,20 @@ console.log(basic.toUpperCase());
 var basicDown = basic.toLowerCase();
 console.log(basic.toLowerCase());
 
+console.log(basic, basic.toUpperCase(), basic.toLowerCase());
+
 // 07 - Split 
 
 var word = "banana";
 var letters = word.split("");
 console.log(word.split(""));
+
+// 08 - Template 
+
+var age = 36;
+// var template = "I'm " + age + " years old";
+// console.log(template); (syntaxe classique)
+
+var template = `I'm ${age} years old`;
+console.log(template);
 
