@@ -51,3 +51,17 @@ var age = 36;
 var template = `I'm ${age} years old`;
 console.log(template);
 
+// Bonus
+
+var changed = "Bonjour";
+console.log(changed.replace(/o/g, "a"));
+
+// Tests 
+
+
+
+var unité = 'l\'unité';
+console.log(unité);
+
+var citation = "Citation de Xavier : \"Talk to a rubber duck\"";
+console.log(citation); 
