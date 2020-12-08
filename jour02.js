@@ -38,7 +38,7 @@ console.log("Comparaison :", test > bis, test < bis, test >= bis, test <= bis, t
 var limit = 50; 
 var score = 64; 
 if (score >= limit) {
-    console.log("Ok good !");
+    console.log("Ok good!");
 } else {
     console.log("Oh nooo...");
 }
@@ -90,6 +90,30 @@ if (random === 6) {
 
 var month = "January";
 
+switch (month) {
+    case "December":
+    case "January":
+    case "February":
+        console.log("Winter");
+        break;
+    case "March":
+    case "April":
+    case "May":
+        console.log("Spring");
+        break;
+    case "June":
+    case "July":
+    case "August":
+        console.log("Summer");
+        break;    
+    case "September":
+    case "October":
+    case "November":
+        console.log("Fall");
+        break;
+    default:
+        console.log("That's not a month on this planet!");
+}
 
 // Bonus III
 
