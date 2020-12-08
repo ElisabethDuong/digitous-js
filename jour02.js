@@ -117,3 +117,4 @@ switch (month) {
 
 // Bonus III
 
+var roundedNumber = 3.6;
