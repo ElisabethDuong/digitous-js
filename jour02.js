@@ -43,12 +43,14 @@ if (score >= limit) {
     console.log("Oh nooo...");
 }
 
+/*
 var otherScore = 42;
 if (otherScore >= limit) {
     console.log("Ok good !");
 } else {
     console.log("Oh nooo...");
 }
+*/
 
 
 // 07 - Condition II
@@ -61,6 +63,11 @@ if (password.length > 5) {
 
 // 08 - Condition III
 
-if (score >= limit, password.length > 5) {
+if (score >= limit && password.length > 5) {
     console.log("Everything is good");
-} 
+} else if (score >= limit || password.length > 5) {
+    console.log("Something is good");
+} else {
+    console.log("Nothing is good")
+}
+// changer les valeurs des variables pour tester
