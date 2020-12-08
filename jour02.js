@@ -53,3 +53,14 @@ if (otherScore >= limit) {
 
 // 07 - Condition II
 
+var password = "azerty";
+if (password.length > 5) {
+    console.log("The password is secure");
+}
+
+
+// 08 - Condition III
+
+if (score >= limit, password.length > 5) {
+    console.log("Everything is good");
+} 
