@@ -63,11 +63,33 @@ if (password.length > 5) {
 
 // 08 - Condition III
 
-if (score >= limit && password.length > 5) {
+if (score >= limit && password.length > 5) { // && = ET
     console.log("Everything is good");
-} else if (score >= limit || password.length > 5) {
+} else if (score >= limit || password.length > 5) { // || = OU
     console.log("Something is good");
 } else {
     console.log("Nothing is good")
 }
 // changer les valeurs des variables pour tester
+
+
+// Bonus 
+
+var min = 1
+var max = 6
+var random = Math.floor(Math.random() * (max - min + 1) + min)
+console.log(random)
+if (random === 6) {
+    console.log("Yes I win !")
+} else {
+    console.log("So close...")
+}
+
+
+// Bonus II
+
+var month = "January";
+
+
+// Bonus III
+
