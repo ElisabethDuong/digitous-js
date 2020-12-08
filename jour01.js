@@ -7,6 +7,7 @@ console.log("Hello World !");
 
 var test = "Elisabeth";
 console.log("My name is", test);
+// une string s'écrit entre "" ou ''
 
 
 // 03 - Concatenation (Coller plusieurs strings ensemble)
@@ -32,16 +33,11 @@ console.log(food.replace("meh", "so good"));
 
 // 06 - Up and Down (Majuscules - Minuscules)
 
-var basic = "This is Cool";
-console.log(basic);
-
+var basic = "This is Cool !";
 var basicUp = basic.toUpperCase();
-console.log(basic.toUpperCase());
-
 var basicDown = basic.toLowerCase();
-console.log(basic.toLowerCase());
 
-console.log(basic, basic.toUpperCase(), basic.toLowerCase());
+console.log(basic, basicUp, basicDown);
 // affiche tout sur la même ligne
 
 
@@ -49,12 +45,12 @@ console.log(basic, basic.toUpperCase(), basic.toLowerCase());
 
 var word = "banana";
 var letters = word.split(""); 
-console.log(word.split(""));
-// variable.split("") : sépare chaque lettre
+console.log(letters);
+// variable.split("") : sépare chaque lettre, espaces compris
 
 var recipeName = "banana bread";
 var words = recipeName.split(" "); 
-console.log(recipeName.split(" "));
+console.log(words);
 // variable.split(" ") : sépare les mots
 
 
@@ -63,16 +59,29 @@ console.log(recipeName.split(" "));
 var age = 36;
 // var template = "I'm " + age + " years old"; 
 // console.log(template); (syntaxe classique)
+// pas besoin de "" pour les nombres
 
 var template = `I'm ${age} years old`;
 console.log(template);
 
 
-// Bonus (Remplacer tous les caractères/termes d'une string)
+// Bonus 
+
+
+    // Replace (Remplacer tous les caractères/termes d'une string)
 
 var changed = "Bonjour";
 console.log(changed.replace(/o/g, "a"));
 // (variable.replace(/terme à remplacer/g, "terme remplaçant"))
+
+
+    // Escape Notation (Echappement de caractères)
+
+var today = 'aujourd\'hui'; // '
+console.log(today);
+    
+var quote = "Citation de Xavier : \"Essaie de parler à un canard en plastique.\""; // ""
+console.log(quote);     
 
 
 // Autres
@@ -104,16 +113,7 @@ console.log(weather.search("Z"));
 var longPhrase = "I lost my mind reading the Bootstrap documentation."; 
 var sub = longPhrase.substring(4, 7);
 var end = longPhrase.substring(12);
-console.log(longPhrase.substring(4, 7));
-console.log(longPhrase.substring(12));
+console.log(sub);
+console.log(end);
 // .substring(a, b) retourne le morceau qui commence à un index a et se termine avant un index b
 // .substring(c) retourne le morceau entre l'index c et la fin de la string
-
-    
-    // Escape Notation (Echappement de caractères)
-
-var unité = 'l\'unité'; // '
-console.log(unité);
-
-var citation = "Citation de Xavier : \"Essaie de parler à un canard en plastique.\""; // ""
-console.log(citation); 
