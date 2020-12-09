@@ -78,6 +78,11 @@ if (score >= limit && password.length > 5) { // && = ET
 var min = 1
 var max = 6
 var random = Math.floor(Math.random() * (max - min + 1) + min)
+/* 
+(Math.random() * (max - min + 1) + min) : donnera des nombres pas forcément entiers
+on lui applique Math.floor pour s'assurer de n'avoir QUE des nombres entiers
+*/
+
 console.log(random)
 if (random === 6) {
     console.log("Yes I win !")
