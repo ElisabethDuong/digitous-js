@@ -122,4 +122,12 @@ switch (month) {
 
 // Bonus III
 
-var roundedNumber = 3.6;
+    // Correction 
+
+    var roundedNumber = 3.3;
+    var decimal = (roundedNumber - Math.floor(roundedNumber));
+    if (decimal >= 0.5) {
+        console.log(Math.ceil(roundedNumber));
+    } else {
+        console.log(Math.floor(roundedNumber));
+    }

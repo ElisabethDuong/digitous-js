@@ -1,28 +1,41 @@
-// 01 - 
+// 01 - Array 
 
 
 
-// 02 - 
+
+// 02 - Access 
 
 
 
-// 03 - 
+// 03 - Add and Remove 
 
 
 
-// 04 - 
+// 04 - Order 
 
 
 
-// 05 - 
+// 05 - Boucle 
 
 
 
-// 06 - 
+// 06 - Reverse 
 
 
 
-// 07 - 
+// Bonus 
+
+
+
+// Bonus II 
+
+
+
+// Bonus III 
+
+
+
+// Bonus IV 
 
 
 
