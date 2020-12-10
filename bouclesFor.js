@@ -1,4 +1,4 @@
-// Exercices d'entraînement aux boucles
+// Exercices entraînement boucles FOR
 
 
     // Table de multiplication
