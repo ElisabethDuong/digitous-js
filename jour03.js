@@ -66,16 +66,10 @@ for (var i = 1; i <= 10; i++) {
 
 console.log("Mon résultat :", total);
 
-// for (start; condition d'arrêt; incrémentation) 
+// for (condition de départ; condition d'arrêt; incrémentation) 
 
 
 // 06 - Reverse 
-
-var sentence = "Hello Konexio !";
-
-for (var i = 14; i >= 0; i--) {
-    console.log(sentence.charAt(i));
-}
 
     // Correction 
 
@@ -94,14 +88,46 @@ for (var i = 14; i >= 0; i--) {
     
 // Bonus 
 
+    // Correction
+
+    for (var i = 0; i <= 100; i++) {
+        console.log(i);
+        if (i % 3 === 0 && i % 5 === 0) { 
+            console.log("fizzbuzz");
+        } else if (i % 3 === 0) {
+            console.log("fizz");
+        } else if (i % 5 === 0) {
+            console.log("buzz");
+        } else if (i % 7 === 0) {
+            console.log();
+        }
+    }
+    // multiple de : i % 5 === 0, i / 5 reste 0
+    // l'ordre des conditions est important. si le 1er if est vrai, la boucle n'ira pas plus loin
 
 
 // Bonus II 
 
+    // Correction 
+
+    var i = 0;
+    while (i < 10) {
+        i++; 
+        total += i;
+    }
 
 
 // Bonus III 
 
+    // Correction 
+
+    var promo = ["Ahmed", "Mohammed", "Houra", "Mohamad Bailo", "Saurav", "Kitty", "Elisabeth", "Nicolas", "Yeshi Tsering", "Mahmoudou", "Allan", "Ewa", "Mosindo", "Hassan", "Sébastien", "Damir", "Hadama", "Thi", "Mohamed", "Atif"];
+    var min = 0;
+    var max = promo.length - 1;
+    var dice = Math.floor(Math.random() * (max - min + 1) + min);
+
+    console.log(dice);
+    console.log(promo[dice]);
 
 
 // Bonus IV 
