@@ -44,24 +44,54 @@ numbers.sort((a, b) => a - b);
 console.log(numbers);
 // .sort() : tri par ordre alphabétique
 // .sort((a, b) => a - b) : par ordre croissant
-// .sort ((a, b) => b -a) : par ordre décroissant
+// .sort((a, b) => b -a) : par ordre décroissant
 
 
 // 05 - Boucle 
 
 var total = 0;
 var limit = 10;
-for (var total = 0; total <= limit; total++) {
-    console.log(total);
+for (var i = 1; i <= 10; i++) {
+    console.log("i =", i);
+    total += i; // total = total + i
+    // 1) i = 1, total = O + 1 = 1
+    // 2) i = 2, total = 1 + 2 = 3
+    // 3) i = 3, total = 3 + 3 = 6
+    // 4) 
+    // .
+    // .
+    // 10) i = 10, total = 45 + 10 = 55
+    console.log("total =", total);
 }
+
+console.log("Mon résultat :", total);
+
 // for (start; condition d'arrêt; incrémentation) 
 
 
 // 06 - Reverse 
 
+var sentence = "Hello Konexio !";
 
+for (var i = 14; i >= 0; i--) {
+    console.log(sentence.charAt(i));
+}
 
+    // Correction 
 
+    var sentence = "Hello Konexio !";
+    var reversedSentence = ""; // variable null pour stocker le résultat de la boucle
+    console.log(sentence.length);
+
+    for (var i = sentence.length -1; i >= 0; i--) {
+        console.log(i);
+        console.log(sentence.charAt(i));
+        reversedSentence = reversedSentence + sentence.charAt(i);
+    }
+
+    console.log(reversedSentence);
+
+    
 // Bonus 
 
 

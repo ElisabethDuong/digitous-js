@@ -125,9 +125,12 @@ switch (month) {
     // Correction 
 
     var roundedNumber = 3.3;
-    var decimal = (roundedNumber - Math.floor(roundedNumber));
-    if (decimal >= 0.5) {
-        console.log(Math.ceil(roundedNumber));
+    var decimalValue = roundedNumber - Math.floor(roundedNumber);
+    var result = null;
+    if (decimalValue >= 0.5) {
+        result = Math.ceil(roundedNumber);
     } else {
-        console.log(Math.floor(roundedNumber));
+        result = Math.floor(roundedNumber);
     }
+
+    console.log(result, Math.round(roundedNumber));
