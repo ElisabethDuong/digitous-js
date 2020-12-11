@@ -49,7 +49,7 @@ for (var i = 25; i <= 75; i++) {
 console.log(somme);
 
 
-    // Exercice 2 : Afficher la multiplication de tout les entier allant de 10 à 15
+    // Exercice 2 : Afficher la multiplication de tous les entiers allant de 10 à 15
 
 // Correction
 
