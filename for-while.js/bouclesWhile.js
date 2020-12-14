@@ -1,4 +1,4 @@
-// Exo 1 
+// Exo 1 : Somme des nombres entre 25 et 75
 
 var i = 25;
 var somme = 0;
