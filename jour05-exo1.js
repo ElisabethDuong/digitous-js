@@ -15,10 +15,17 @@ function calculate(num1, operator, num2) {
         return number1 % number2;
     }
 }
-// console.log(process.argv); // pr voir l'index de chaque paramètre
+console.log(process.argv); // pr voir l'index de chaque paramètre donc le nombre d'éléments de l'array
+
 if (process.argv.length === 5) {
-console.log(calculate(process.argv[2], process.argv[3], process.argv[4]));
+    /* 
+    les paramètres font partie de l'array process.argv
+    pour déterminer le nombre d'éléments d'un array, on utilise .length
+    ici on veut 3 paramètres donc length => 5 
+    (1er : emplacement de node, 2ème : emplacement du fichier en exécution)
+    */
+    console.log(calculate(process.argv[2], process.argv[3], process.argv[4])); 
+    // on désigne les paramètres à calculer
 } else {
     console.log("error");
 }
-// on désigne les paramètres à calculer
