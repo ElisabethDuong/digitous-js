@@ -7,8 +7,9 @@ var cat = {
 };
 console.log(cat);
 console.log("Age:", cat.age);
+// console.log(cat["age"])
 
-if (cat.isCute === true) {
+if (cat.isCute) { // cat.isCute est déjà un boolean, pas besoin de mettre === true
     console.log("So cuuute!!!")
 }
 
@@ -46,9 +47,9 @@ checkIfEven(5);
 
 function compare(num1, num2) {
     if (num1 > num2) {
-        console.log("num1 is bigger");
+        console.log(`${num1} is bigger`);
     } else if (num2 > num1) {
-        console.log("num2 is bigger");
+        console.log(`${num2} is bigger`);
     } else {
         console.log("both are the same");
     }
@@ -65,12 +66,49 @@ function addUp(num) {
     for (var i = 1; i <= num; i++) {
         sum += i;
     }
-    console.log(sum);
+    console.log("Somme =", sum);
 }
 addUp(12);
+// si la variable n'est utilisée que pour la fonction, il faut la mettre dans la fonction ! 
+// si elle est en dehors, la fonction utilisera le résultat de la fonction comme variable de départ
 
 
 // 06 - Time
 
+// function format(num) {
+//     console.log(Math.floor(num / 3600)); // heures
+//     console.log(num % 3600); // minutes et secondes
+//     console.log(Math.floor(num % 3600 / 60)); 
+//     console.log(num % 3600 / 60);
+// }
 
+// var hours = Math.floor(num / 3600);
+// var restHours = (num %3600);
+
+
+
+function formatWithoutMaths(num) {
+    var days = 0;
+    var hours = 0;
+    var minutes = 0;
+    var seconds = 0;
+    for (var i = 0; i < num; i++) {
+        if (seconds === 60) {
+            minutes++;
+            seconds = 0;
+        }
+        if (minutes === 60) {
+            hours++;
+            minutes = 0;
+        }
+        if (hours === 24) {
+            days++;
+            hours = 0;
+        }
+    }
+    console.log(`${hours} : ${minutes} : ${seconds}`);
+}
+formatWithoutMaths(3700);
+
+// Bonus 1 - Generate Password
 
