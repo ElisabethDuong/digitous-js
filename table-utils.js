@@ -9,3 +9,8 @@ function addition(number) {
         console.log(`${number} + ${i} = $(number + i)`);
     }
 }
+
+module.exports = {
+    multiply,
+    addition
+}
