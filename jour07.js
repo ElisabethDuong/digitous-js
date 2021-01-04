@@ -1,11 +1,11 @@
 // 01 - File System
 
- var fs = require("fs"); 
+//  var fs = require("fs"); 
 
- fs.readFile("./jour07.txt", function(error, data) {
-    console.log(error);
-    console.log(data.toString());
- }) 
+//  fs.readFile("./jour07.txt", function(error, data) {
+//     console.log(error);
+//     console.log(data.toString());
+//  }) 
 
 
  // 02 - Map Double
@@ -19,6 +19,34 @@
  console.log(double); 
 
 
+//  Autre notation : Arrow Function
+
+//  var numbers = [1, 2, 3, 4, 5];
+
+//  var triples = numbers.map((num) => num * 3);
+
+//  console.log(triples);
+
+
  // 03 - Map Names
 
- 
+ var longNames = [
+	{
+		firstName: "Jane",
+		lastName: "Doe"
+	},
+	{
+		firstName: "John",
+		lastName: "Smith"
+	}
+]
+
+var shortNames = longNames.map(function(element) {
+    return ({name: element.firstName + " " + element.lastName});
+}); 
+
+console.log(shortNames);
+
+
+// 04 - Filter Numbers
+
