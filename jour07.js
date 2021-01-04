@@ -1,22 +1,22 @@
 // 01 - File System
 
-//  var fs = require("fs"); 
+var fs = require("fs");
 
-//  fs.readFile("./jour07.txt", function(error, data) {
-//     console.log(error);
-//     console.log(data.toString());
-//  }) 
+fs.readFile("./jour07.txt", function (error, data) {
+    console.log(error);
+    console.log(data.toString());
+})
 
 
- // 02 - Map Double
+// 02 - Map Double
 
- var array = [1, 2, 3, 4, 5];
+var array = [1, 2, 3, 4, 5];
 
- var double = array.map(function(num) {
-     return num * 2;
- });
+var double = array.map(function (num) {
+    return num * 2;
+});
 
- console.log(double); 
+console.log(double);
 
 
 //  Autre notation : Arrow Function
@@ -28,25 +28,36 @@
 //  console.log(triples);
 
 
- // 03 - Map Names
+// 03 - Map Names
 
- var longNames = [
-	{
-		firstName: "Jane",
-		lastName: "Doe"
-	},
-	{
-		firstName: "John",
-		lastName: "Smith"
-	}
+var longNames = [
+    {
+        firstName: "Jane",
+        lastName: "Doe"
+    },
+    {
+        firstName: "John",
+        lastName: "Smith"
+    }
 ]
 
-var shortNames = longNames.map(function(element) {
-    return ({name: element.firstName + " " + element.lastName});
-}); 
+var shortNames = longNames.map(function (element) {
+    return ({ name: element.firstName + " " + element.lastName });
+});
 
 console.log(shortNames);
 
 
 // 04 - Filter Numbers
+
+var array = [1, "toto", 34, "javascript", 8];
+
+function numbers(list) {
+    return list.filter((element) => {return element >= 0;});
+}
+
+console.log(numbers(array));
+
+
+// 05 - Filter Even
 
