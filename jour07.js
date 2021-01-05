@@ -1,70 +1,91 @@
-// 01 - File System
+// 01 - Alphabet
 
-var fs = require("fs");
+//     var alph = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+function sortLetters(word) {
+    var arrayLetters = word.split("");
+    // console.log(arrayLetters);
+    var sortedArrayLetters = arrayLetters.sort();
+    // console.log(sortedArrayLetters);
+    var newWord = sortedArrayLetters.join("");
+    console.log(newWord);
+}
+sortLetters("konexio");
 
-fs.readFile("./jour07.txt", function (error, data) {
-    console.log(error);
-    console.log(data.toString());
-})
+/*
+- on convertit le (string) en [array] avec .split("") pr avoir toutes les lettres
+    ==> konexio -> [k, o, n, e, x, i, o]
+- on classe les éléments de l'array par ordre alphabétique avec .sort() 
+    ==> [e, i, k, n, o, o, x]
+- on réunit les lettres classées pour en refaire un string avec .join("") 
+    ==> eiknoox
+*/
 
+    // Autre méthode by Sébastien
 
-// 02 - Map Double
-
-var array = [1, 2, 3, 4, 5];
-
-var double = array.map(function (num) {
-    return num * 2;
-});
-
-console.log(double);
-
-
-//  Autre notation : Arrow Function
-
-//  var numbers = [1, 2, 3, 4, 5];
-
-//  var triples = numbers.map((num) => num * 3);
-
-//  console.log(triples);
-
-
-// 03 - Map Names
-
-var longNames = [
-    {
-        firstName: "Jane",
-        lastName: "Doe"
-    },
-    {
-        firstName: "John",
-        lastName: "Smith"
+    function sortLettersSebastien(word) {
+        var letters = [];
+        for (var i = 0; i < word.length; i++) {
+            letters.push(word[i]);
+        }
+        console.log(letters.sort().join(""));
     }
-]
-
-var shortNames = longNames.map(function (element) {
-    return ({ name: element.firstName + " " + element.lastName });
-});
-
-console.log(shortNames);
+    sortLettersSebastien("konexio");
 
 
-// 04 - Filter Numbers
+// 02 - XOXO
 
-var array = [1, "toto", 34, "javascript", 8];
+function countEach(string) {
+    var numberOfX = string.split("x").length - 1;
+    // console.log(numberOfX);
+    var numberOfO = string.split("o").length - 1;
+    // console.log(numberOfO);
+    if (numberOfX === numberOfO) {
+        return true;
+    } else {
+        return false;
+    }
+}
+var comparison = countEach("xoxo");
+console.log(comparison);
+countEach("xoxo");
 
-function numbers(list) {
-    return list.filter((element) => {return element >= 0;});
+// .length - 1 car on compte à partir de 0
+
+
+function countEach(string) {
+
 }
 
-console.log(numbers(array));
+
+// 03 - Palindrome
+
+function checkPal(string) {
+    var reversedString = "";
+    // console.log(string.length);
+    for (var i = string.length -1; i >= 0; i--) {
+        // console.log(i);
+        // console.log(string.charAt(i));
+        reversedString = reversedString + string.charAt(i);
+    }
+    console.log(reversedString);
+
+    if (reversedString === string) { // on met le if ici car on a besoin de string et de reversedString
+        console.log("Palindrome !");
+    } else {
+        console.log("Nope");
+    }
+}
+checkPal("ici");
 
 
-// 05 - Filter Even
+// 04 - Swap
 
-var numbers = [1, 2, 3, 4, 5, 6, 7, 8]; 
+function swap(string) {
 
-var even = numbers.filter(function(num) {
-    return (num % 2 === 0);
-});
+}
 
-console.log(even);
+/*
+replace
+toUpperCase
+toLowerCase
+*/
