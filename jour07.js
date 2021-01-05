@@ -1,91 +1,122 @@
-// 01 - Alphabet
+// 01 - File System
 
-//     var alph = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
-function sortLetters(word) {
-    var arrayLetters = word.split("");
-    // console.log(arrayLetters);
-    var sortedArrayLetters = arrayLetters.sort();
-    // console.log(sortedArrayLetters);
-    var newWord = sortedArrayLetters.join("");
-    console.log(newWord);
-}
-sortLetters("konexio");
+var fs = require("fs");
 
-/*
-- on convertit le (string) en [array] avec .split("") pr avoir toutes les lettres
-    ==> konexio -> [k, o, n, e, x, i, o]
-- on classe les éléments de l'array par ordre alphabétique avec .sort() 
-    ==> [e, i, k, n, o, o, x]
-- on réunit les lettres classées pour en refaire un string avec .join("") 
-    ==> eiknoox
-*/
+fs.readFile("./jour08.txt", function(error, data) {
+    console.log(error);
+    console.log(data.toString());
+})
 
-    // Autre méthode by Sébastien
 
-    function sortLettersSebastien(word) {
-        var letters = [];
-        for (var i = 0; i < word.length; i++) {
-            letters.push(word[i]);
-        }
-        console.log(letters.sort().join(""));
+// 02 - Map Double
+
+var array = [1, 2, 3, 4, 5];
+
+var double = array.map(function(element) {
+    return element * 2;
+});
+
+console.log(double);
+
+
+//  Autre notation : Arrow Function
+
+//  var numbers = [1, 2, 3, 4, 5];
+
+//  var triples = numbers.map((element) => element * 3);
+
+//  console.log(triples);
+
+
+// 03 - Map Names
+
+var longNames = [
+    {
+        firstName: "Jane",
+        lastName: "Doe"
+    },
+    {
+        firstName: "John",
+        lastName: "Smith"
     }
-    sortLettersSebastien("konexio");
+]
+
+var shortNames = longNames.map(function(element) {
+    return {
+        name: `${element.firstName} ${element.lastName}`
+    };
+});
+
+// return {name: ` `} car on veut un array d'objets
+
+console.log(shortNames);
 
 
-// 02 - XOXO
+// 04 - Filter Numbers
 
-function countEach(string) {
-    var numberOfX = string.split("x").length - 1;
-    // console.log(numberOfX);
-    var numberOfO = string.split("o").length - 1;
-    // console.log(numberOfO);
-    if (numberOfX === numberOfO) {
-        return true;
-    } else {
-        return false;
+var array = [1, "toto", 34, "javascript", 8];
+
+var numbers = array.filter(function(element) {
+    return typeof element === "number";
+    // return parseInt(element) === element;
+});
+
+console.log(numbers);
+
+
+// 05 - Filter Even
+
+var numbers = [1, 2, 3, 4, 5, 6, 7, 8];
+
+var even = numbers.filter(function(element) {
+    return (element % 2 === 0);
+});
+
+console.log(even);
+
+
+// 06 - Cakes
+
+var cakes = [
+    {
+        name: "cake",
+        flavor: "vanilla",
+        status: "available"
+    },
+    {
+        name: "brownie",
+        flavor: "chocolate",
+        status: "available"
+    },
+    {
+        name: "pie",
+        flavor: "strawberry",
+        status: "available"
+    },
+    {
+        name: "muffin",
+        flavor: "pistachio",
+        status: "available"
+    },
+    {
+        name: "donut",
+        flavor: "chocolate",
+        status: "available"
     }
-}
-var comparison = countEach("xoxo");
-console.log(comparison);
-countEach("xoxo");
+]
 
-// .length - 1 car on compte à partir de 0
+var chocolateCakes = cakes.filter(function(element) {
+    return element.flavor === "chocolate";
+}).map(function(element) {
+    element.status = "Sold out!";
+    return element;
+});
 
+console.log(chocolateCakes);
 
-function countEach(string) {
-
-}
-
-
-// 03 - Palindrome
-
-function checkPal(string) {
-    var reversedString = "";
-    // console.log(string.length);
-    for (var i = string.length -1; i >= 0; i--) {
-        // console.log(i);
-        // console.log(string.charAt(i));
-        reversedString = reversedString + string.charAt(i);
-    }
-    console.log(reversedString);
-
-    if (reversedString === string) { // on met le if ici car on a besoin de string et de reversedString
-        console.log("Palindrome !");
-    } else {
-        console.log("Nope");
-    }
-}
-checkPal("ici");
+// .filter pour cibler que les gâteaux au chocolat
+// .map pour copier et attribuer une nouvelle valeur
 
 
-// 04 - Swap
+// Bonus
 
-function swap(string) {
-
-}
-
-/*
-replace
-toUpperCase
-toLowerCase
-*/
