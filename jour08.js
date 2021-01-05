@@ -19,7 +19,7 @@ function getCountries() {
     });
 }
 
-// getCountries();
+getCountries();
 
 
 // 02 - Chuck Norris
@@ -35,4 +35,20 @@ function getFacts() {
 getFacts();
 
 
-// 03 - 
+// 03 - Pokemon
+
+function catchPokemon(id) {
+    var urlPokemon = "https://pokeapi.co/api/v2/pokemon/" + id;
+    request.get(urlPokemon, function(error, response, body) {
+        // console.log(body);
+        var pokemon = JSON.parse(body);
+        console.log(`id: ${pokemon.id}`);
+        console.log(`name: ${pokemon.name}`);
+    });
+}
+
+catchPokemon(25);
+
+
+// on écrit request.get("url" + id) pour définir/lier le paramètre id à l'API
+// on stocke url + id dans une variable pour que ce soit plus lisible
