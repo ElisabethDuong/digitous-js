@@ -2,7 +2,7 @@
 
 var fs = require("fs");
 
-fs.readFile("./jour07.txt", function (error, data) {
+fs.readFile("./jour08.txt", function(error, data) {
     console.log(error);
     console.log(data.toString());
 })
@@ -12,8 +12,8 @@ fs.readFile("./jour07.txt", function (error, data) {
 
 var array = [1, 2, 3, 4, 5];
 
-var double = array.map(function (num) {
-    return num * 2;
+var double = array.map(function(element) {
+    return element * 2;
 });
 
 console.log(double);
@@ -23,7 +23,7 @@ console.log(double);
 
 //  var numbers = [1, 2, 3, 4, 5];
 
-//  var triples = numbers.map((num) => num * 3);
+//  var triples = numbers.map((element) => element * 3);
 
 //  console.log(triples);
 
@@ -41,9 +41,13 @@ var longNames = [
     }
 ]
 
-var shortNames = longNames.map(function (element) {
-    return ({ name: element.firstName + " " + element.lastName });
+var shortNames = longNames.map(function(element) {
+    return {
+        name: `${element.firstName} ${element.lastName}`
+    };
 });
+
+// return {name: ` `} car on veut un array d'objets
 
 console.log(shortNames);
 
@@ -52,19 +56,20 @@ console.log(shortNames);
 
 var array = [1, "toto", 34, "javascript", 8];
 
-function numbers(list) {
-    return list.filter((element) => { return element >= 0; });
-}
+var numbers = array.filter(function(element) {
+    return typeof element === "number";
+    // return parseInt(element) === element;
+});
 
-console.log(numbers(array));
+console.log(numbers);
 
 
 // 05 - Filter Even
 
 var numbers = [1, 2, 3, 4, 5, 6, 7, 8];
 
-var even = numbers.filter(function (num) {
-    return (num % 2 === 0);
+var even = numbers.filter(function(element) {
+    return (element % 2 === 0);
 });
 
 console.log(even);
@@ -100,4 +105,18 @@ var cakes = [
     }
 ]
 
-// var chocolateCakes = 
+var chocolateCakes = cakes.filter(function(element) {
+    return element.flavor === "chocolate";
+}).map(function(element) {
+    element.status = "Sold out!";
+    return element;
+});
+
+console.log(chocolateCakes);
+
+// .filter pour cibler que les gâteaux au chocolat
+// .map pour copier et attribuer une nouvelle valeur
+
+
+// Bonus
+
